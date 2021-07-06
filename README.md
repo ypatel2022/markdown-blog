@@ -4,7 +4,7 @@ A blog where you can use markdown to create your posts!
 
 One of the main focuses of this project was to use and get familiar with [Tailwind CSS](https://tailwindcss.com/) and to style the website with the [glassmorphism](https://uxdesign.cc/glassmorphism-in-user-interfaces-1f39bb1308c9) UI trend.
 
-Visit the deployed app here: https://markdown-app-ypatel2022.herokuapp.com/
+Visit the deployed app here: https://markdown-blog-ypatel2022.herokuapp.com/
 
 <br/>
 
