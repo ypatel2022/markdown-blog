@@ -28,7 +28,7 @@ app.use('/articles', articleRouter);
 
 // 404 not found
 app.get('*', function (req, res) {
-  res.render('error');
+  res.render('articles/error');
 });
 
 
