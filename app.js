@@ -24,6 +24,12 @@ app.get('/', async (req, res) => {
   res.render('articles/index', { articles: articles })
 })
 
-app.use('/articles', articleRouter)
+app.use('/articles', articleRouter);
 
-app.listen(3000)
+
+let port = process.env.PORT;
+if (port == null || post == "") {
+  port = 3000;
+}
+
+app.listen(port, () => console.log("Server has started successfully"));
