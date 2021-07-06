@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+
+
+<div class="max-w-5xl mx-auto px-4">
+
+
+  <div class="card">
+    <h1 class="mt-10 font-bold text-6xl mb-1"><%= article.title %></h1>
+    <div class="muted text-sm">
+      <%= article.createdAt.toLocaleDateString() %>
+    </div>
+
+    <hr>
+
+    <div class="mt-4 mb-3">
+      <a href="/" class="px-3 py-1 rounded-md btn btn-secondary mr-3 inline-block">All Articles</a>
+
+      <a href="/articles/edit/<%= article.id %>" class="px-3 py-1 rounded-md btn btn-info mr-3 inline-block">Edit</a>
+    </div>
+
+    <div>
+      <%- article.sanitizedHtml %>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+</div>
+
+<%- include('../partials/footer') %>

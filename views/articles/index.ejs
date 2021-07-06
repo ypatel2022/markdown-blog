@@ -1,0 +1,61 @@
+<%- include('../partials/header') %>
+
+
+
+<div class="max-w-5xl mx-auto px-4">
+
+
+  <h1 class="mt-10 font-bold text-6xl mb-4">Articles</h1>
+
+
+  <div class="my-10">
+    <a href="/articles/new" class="px-5 py-3 btn btn-primary rounded-lg">
+
+
+      <svg class="fill-current inline-block align-bottom mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 24 24">
+        <path
+          d="M19.769 9.923l-12.642 12.639-7.127 1.438 1.438-7.128 12.641-12.64 5.69 5.691zm1.414-1.414l2.817-2.82-5.691-5.689-2.816 2.817 5.69 5.692z" />
+      </svg>
+
+      <h1 class="text-xl inline-block">
+        New Article
+      </h1>
+
+    </a>
+  </div>
+
+
+  <% articles.forEach(article => { %>
+  <div class="card transition-in-out-200">
+
+    <div class="">
+
+      <h4 class="text-xl"><%= article.title %></h4>
+
+      <div class="muted text-sm">
+        <%= article.createdAt.toLocaleDateString() %>
+      </div>
+
+      <hr>
+
+      <div class="card-text mb-4"><%= article.description %></div>
+
+      <a href="articles/<%= article.slug %>" class="px-3 py-1 rounded-md btn btn-primary mr-3 inline-block">Read
+        More</a>
+      <a href="articles/edit/<%= article.id %>" class="px-3 py-1 rounded-md btn btn-info mr-3 inline-block">Edit</a>
+
+      <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="inline-block">
+        <button type="submit" class="px-3 py-1 rounded-md btn btn-danger">Delete</button>
+      </form>
+
+    </div>
+  </div>
+  <% }) %>
+
+</div>
+
+
+</div>
+
+<%- include('../partials/footer') %>
