@@ -26,6 +26,11 @@ app.get('/', async (req, res) => {
 
 app.use('/articles', articleRouter);
 
+// 404 not found
+app.get('*', function (req, res) {
+  res.render('error');
+});
+
 
 let port = process.env.PORT;
 if (port == null || port == "") {
