@@ -28,7 +28,7 @@ app.use('/articles', articleRouter);
 
 
 let port = process.env.PORT;
-if (port == null || post == "") {
+if (port == null || port == "") {
   port = 3000;
 }
 
