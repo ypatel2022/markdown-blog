@@ -24,7 +24,7 @@ Change terminal directory to project directory:
 cd markdown-blog
 ```
 
-Install relevant project dependancies in terminal:
+Install relevant project dependencies in terminal:
 ```sh
 npm i
 ```
